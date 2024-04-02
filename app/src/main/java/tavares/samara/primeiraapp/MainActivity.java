@@ -19,11 +19,11 @@ public class MainActivity extends AppCompatActivity {
         btnEnviar.setOnClickListener(new View.OnClickListener() { //define o que acontece quando se pressiona o botao
            @Override
             public void onClick(View v) { //E executado quando o botao e pressionado
-               EditText etDigiteAqui = findViewById(R.id.etDigiteAqui);
-                String textoDigitado = etDigiteAqui.getText().toString();
-                Intent i =new Intent(MainActivity.this,NewActivity.class);
-                i.putExtra("texto", textoDigitado);
-                startActivity(i);
+               EditText etDigiteAqui = findViewById(R.id.etDigiteAqui); //referencia o campo de texto pelo ID etDigiteAqui
+                String textoDigitado = etDigiteAqui.getText().toString(); //obtem o texto digitado no campo de texto
+                Intent i =new Intent(MainActivity.this,NewActivity.class); //Cria um novo objeto Intent para iniciar NewActivity
+                 i.putExtra("texto", textoDigitado); // Adiciona o texto digitado como dado extra no Intent
+                 startActivity(i); // Inicia NewActivity com o Intent configurado
             }
         });
     }
